@@ -4,8 +4,8 @@ import g55836.luckynumbers.model.Model;
 import g55836.luckynumbers.view.View;
 
 public class Controller {
-    private Model model;
-    private View view;
+    private final Model model;
+    private final View view;
 
     public Controller(Model model, View view) {
         this.model = model;

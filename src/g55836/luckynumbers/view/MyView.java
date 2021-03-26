@@ -6,8 +6,8 @@ import g55836.luckynumbers.model.Tile;
 import java.util.Scanner;
 
 public class MyView implements View {
-    private Model model;
-    private Scanner input;
+    private final Model model;
+    private final Scanner input;
 
     private void printLine(int line) {
         System.out.print(line+1+"|");
@@ -25,7 +25,7 @@ public class MyView implements View {
     }
 
     public void displayWelcome() {
-        System.out.println("Locky nomba, Fanta, v0.1\n");
+        System.out.println("Lucky Number,Kerdoudi Zakaria, v0.1\n");
     }
     public void displayGame() {
         System.out.println("Joueur " + model.getCurrentPlayerNumber() + 1 + '\n');
@@ -52,7 +52,8 @@ public class MyView implements View {
             System.out.print("Column: ");
             posXBuffer = input.nextInt() - 1;
             pos = new Position(posYBuffer, posXBuffer);
-        } while (!model.isInside(pos) || !model.canTileBePut(pos));
+        } while (!model.isInside(pos) || !model.canTileBePut(pos)); // do while loop so the program run the condition at least once
+                                                                    // and ask again a position if she is not a valid position
 
         return pos;
     }

@@ -5,15 +5,16 @@ public class Board
     private final Tile[][] tiles;
 
     public Board() {
-        tiles = new Tile[4][4];
+        tiles = new Tile[4][4]; // size of the board
     }
 
     public int getSize() { return tiles.length; }
     public boolean isInside(Position pos) {
-        return !(pos.getRow() < 0 || pos.getRow() >= getSize() ||
+        return !(pos.getRow() < 0 || pos.getRow() >= getSize() || // I used "!" to check if a point is not inside the board
                 pos.getColumn() < 0 || pos.getColumn() >= getSize());
     }
     public Tile getTile(Position pos) { return tiles[pos.getRow()][pos.getColumn()]; }
+    // Put a tile and return the state of the board
     public boolean canBePut(Tile tile, Position pos) {
         boolean res = true;
 
@@ -27,7 +28,7 @@ public class Board
         }
 
         // Col
-        for(int i=0; i < getSize(); ++i) {
+        for(int i=0; i < getSize(); ++i) { // ++i return the value after adding
             if(tiles[i][pos.getColumn()] != null && (
                     (i < pos.getRow() && tile.getValue() <= tiles[i][pos.getColumn()].getValue()) ||
                             (i > pos.getRow() && tile.getValue() >= tiles[i][pos.getColumn()].getValue())
