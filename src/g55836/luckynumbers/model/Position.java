@@ -1,4 +1,5 @@
-package g55836.luckynumbers.model;
+package g55836.LuckyNumbers.model;
+
 /**
  * @author Kerdoudi Zakaria
  * Position take the row and column as parameter and return the row and column

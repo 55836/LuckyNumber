@@ -1,7 +1,8 @@
-package g55836.luckynumbers.view;
-import g55836.luckynumbers.model.Model;
-import g55836.luckynumbers.model.Position;
-import g55836.luckynumbers.model.Tile;
+package g55836.LuckyNumbers.View;
+
+import g55836.LuckyNumbers.model.Model;
+import g55836.LuckyNumbers.model.Position;
+import g55836.LuckyNumbers.model.Tile;
 
 import java.util.Scanner;
 
@@ -53,7 +54,7 @@ public class MyView implements View {
             posXBuffer = input.nextInt() - 1;
             pos = new Position(posYBuffer, posXBuffer);
         } while (!model.isInside(pos) || !model.canTileBePut(pos)); // do while loop so the program run the condition at least once
-                                                                    // and ask again a position if she is not a valid position
+        // and ask again a position if she is not a valid position
 
         return pos;
     }

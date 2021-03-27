@@ -1,6 +1,6 @@
-package g55836.luckynumbers.view;
+package g55836.LuckyNumbers.View;
 
-import g55836.luckynumbers.model.Position;
+import g55836.LuckyNumbers.model.Position;
 
 public interface View {
     void displayWelcome();

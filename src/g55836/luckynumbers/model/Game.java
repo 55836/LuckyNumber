@@ -1,4 +1,4 @@
-package g55836.luckynumbers.model;
+package g55836.LuckyNumbers.model;
 
 import java.util.Random;
 

@@ -1,4 +1,5 @@
-package g55836.luckynumbers.model;
+package g55836.LuckyNumbers.model;
+
 /**
  * @author Kerdoudi Zakaria
  * Return the value of tile

@@ -1,4 +1,5 @@
-package g55836.luckynumbers.model;
+package g55836.LuckyNumbers.model;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;

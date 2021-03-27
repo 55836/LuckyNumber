@@ -1,7 +1,7 @@
-package g55836.luckynumbers.controller;
+package g55836.LuckyNumbers.Controller;
 
-import g55836.luckynumbers.model.Model;
-import g55836.luckynumbers.view.View;
+import g55836.LuckyNumbers.model.Model;
+import g55836.LuckyNumbers.View.View;
 
 public class Controller {
     private final Model model;
@@ -15,21 +15,16 @@ public class Controller {
         view.displayWelcome();
         while (true) {
             switch (model.getState()) {
-                case NOT_STARTED:
-                case GAME_OVER:
+                case NOT_STARTED, GAME_OVER -> {
                     view.displayWinner();
                     model.start(view.askPlayerCount());
-                    break;
-                case PICK_TILE:
+                }
+                case PICK_TILE -> {
                     model.pickTile();
                     view.displayGame();
-                    break;
-                case PLACE_TILE:
-                    model.putTile(view.askPosition());
-                    break;
-                case TURN_END:
-                    model.nextPlayer();
-                    break;
+                }
+                case PLACE_TILE -> model.putTile(view.askPosition());
+                case TURN_END -> model.nextPlayer();
             }
         }
     }
