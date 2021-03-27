@@ -1,4 +1,4 @@
-package g55836.LuckyNumbers.model;
+package g55836.luckynumbers.model;
 
 public class Board
 {
